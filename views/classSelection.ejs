@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+        <div class="card mx-auto p-1"
+                style="width: 20rem; height: 20rem; align-items: center; margin-top: 7rem; border: 2px solid black;">
+                <div class="card-body">
+                        <h3 class="card-title" style="color: rgb(90, 90, 187); text-align: center;">Fitness Slot Booking
+                                System
+                        </h3> <br>
+                        <form action="/api/cancelbooking" method="POST">
+                                <h6 class=""> Choose the class you wish to cancell </h6>
+                                <div class="container">
+                                        <h6 class=""> Enter your Name </h6>
+                                        <input name="name" required="true"
+                                                style="margin: 3% auto; border: 0.3px solid black; border-radius: 2%;"
+                                                type="text" id="name" value=""></input>
+                                        <br>
+                                        <select name="class" class="form-select" id="validationCustom04" required>
+                                                <option value="yoga">yoga</option>
+                                                <option value="gym">gym</option>
+                                                <option value="dance">dance</option>
+                                        </select>
+                                        <button class="btn btn-warning my-2" id="imp"> Submit </button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+
+        <%- include('partials/footer') %>

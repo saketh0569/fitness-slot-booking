@@ -1,0 +1,100 @@
+<!-- for booking -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fitness Slot Booking System</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+        <script src="script.js"></script>
+        <style>
+                .cont4 {
+                        height: 8%;
+                        width: 70%;
+                        margin: auto;
+                }
+
+                .grid-container {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        background-color: #232525;
+                        padding: 1px;
+                }
+
+                .grid-item {
+                        background-color: rgba(236, 234, 234, 0.8);
+                        border: 1px solid rgba(0, 0, 0, 0.8);
+                        padding: 20px;
+                        font-size: 30px;
+                        text-align: center;
+                }
+        </style>
+</head>
+
+<body>
+
+        <div class="cont4">
+                <div class="grid-container">
+                        <div class="grid-item">Class</div>
+                        <div class="grid-item">Start Time</div>
+                        <div class="grid-item ">Available Slots</div>
+                        <div class="grid-item">Yoga</div>
+                        <div class="grid-item a">2021-10-04 01:00:00</div>
+                        <div class="grid-item"> 50
+                        </div>
+                        <div class="grid-item">Gym</div>
+                        <div class="grid-item b">2021-10-04 03:00:00</div>
+                        <div class="grid-item"> 50
+                        </div>
+                        <div class="grid-item">Dance</div>
+                        <div class="grid-item c">2021-10-04 02:00:00</div>
+                        <div class="grid-item"> 50
+                        </div>
+                </div>
+                </p>
+        </div>
+
+        <div class="card mx-auto p-1"
+                style="width: 20rem; height: 20rem; align-items: center; margin-top: 7rem; border: 2px solid black;">
+                <div class="card-body">
+                        <h3 class="card-title" style="color: rgb(90, 90, 187); text-align: center;">Fitness Slot Booking
+                                System
+                        </h3> <br>
+                        <form action="/api/booking" method="POST">
+                                <h6 class=""> Choose the class you want to Attend </h6>
+                                <div class="container">
+                                        <h6 class=""> Enter your Name </h6>
+                                        <input required="true" name="name"
+                                                style="margin: 3% auto; border: 0.3px solid black; border-radius: 2%;"
+                                                type="text" id="name" value=""></input>
+                                        <br>
+                                        <select name="class" class="form-select" id="validationCustom04" required>
+                                                <option value="yoga">yoga</option>
+                                                <option value="gym">gym</option>
+                                                <option value="dance">dance</option>
+                                        </select>
+                                        <button class="btn btn-warning my-2" id="imp"> Submit </button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+
+</body>
+<script>
+        var a = document.querySelector(".a")
+        var b = document.querySelector(".b")
+        var c = document.querySelector(".c")
+
+        // new Date(new Date().getTime() + 2*60*60*1000)
+        a.innerHTML = new Date(new Date().getTime() + 2 * 60 * 60 * 1000);
+        b.innerHTML = new Date(new Date().getTime() + 3 * 60 * 60 * 1000)
+        c.innerHTML = new Date(new Date().getTime() + 4 * 60 * 60 * 1000)
+        console.log(a);
+        console.log(b);
+</script>
+
+</html>
